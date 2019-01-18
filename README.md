@@ -1,6 +1,25 @@
 # lisp-js
 Exploring implementation of a barebones Lisp-like interpreter with JavaScript.
 
+### Tokenization
+```javascript
+const program = '(add 2 (add 5 5) 3)';
+const tokens = tokenize(program);
+
+console.log(tokens);
+//=> ['(', 'add', '2', '(', 'add', '5', '5', ')', '3', ')']
+```
+
+### Abstract Syntax Tree
+```javascript
+const program = '(add 2 (add 5 5) 3)';
+const AST = parse(tokenize(program));
+
+console.log(AST);
+//=> ['add', '2', ['add', '5', '5'], '3']
+```
+
+### Evaluation
 ```javascript
 [
   evaluate(parse(tokenize('(add 2 (add 5 5) 3)'))) === 15,
