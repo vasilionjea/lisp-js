@@ -1,5 +1,6 @@
-# lisp-js
-`experimental` Exploring implementation of a barebones Lisp-like "interpreter" with JavaScript.
+# About
+You can ignore. For learning purposes. 
+Exploring implementation of a barebones Lisp-like "interpreter" with JavaScript.
 
 ### Tokenization
 ```javascript
