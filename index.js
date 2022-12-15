@@ -1,3 +1,6 @@
+// A simple, iterator-based, recursive descent parser: 
+// https://en.wikipedia.org/wiki/Recursive_descent_parser
+
 const PUNCTUATORS = {
   open: '(',
   close: ')',
@@ -32,7 +35,7 @@ function tokenize(str = '') {
 }
 
 /**
- * Builds an AST such as: `[add, 2, [add, 5, 5]]`
+ * Builds an AST such as: `['add', 2, ['add', 5, 5]]`
  * @returns {Array}
  */
 function parse(tokens = []) {
